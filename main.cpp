@@ -28,36 +28,21 @@ int main(int argc, char *argv[])
     if(!IMG_Init(IMG_INIT_PNG)) cout << "[ERROR] Failed Image Init: " << SDL_GetError() << endl;
     SDL_Cursor* SDL_CURSOR_ARROW = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_ARROW);
     SDL_Cursor* SDL_CURSOR_HAND = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_HAND);
-
-    //Random seed
     srand(time(NULL));
-
-    //Window, background, and textures
     RenderWindow window("Sudoku", 480, 720);
-
     SDL_Texture* backgroundTexture = window.loadTexture("res/images/bg.png");
     SDL_Texture* restartButtonTexture = window.loadTexture("res/images/restart.png");
     Entity background(Vector2f(0, 0), window.getWidth(), window.getHeight(), backgroundTexture);
     Entity restartButton(Vector2f(25, 25), 30, 30, restartButtonTexture);
-
     vector<SDL_Texture*> numberTextures;
     window.loadTextures("res/dev/texture_list.txt", numberTextures);
-
-    //Board
     Board board(Vector2f(BOARD_START_X, BOARD_START_Y), numberTextures);
-
-    //Program starts
     bool isRunning = true;
-
     Mouse mouse;
     SDL_Event event;
-
-    //Program loop
     while(isRunning)
     {
         int startTick = SDL_GetTicks();
-
-        //Event handler
         while(SDL_PollEvent(&event))
         {
             switch(event.type)
@@ -109,8 +94,6 @@ int main(int argc, char *argv[])
 
         window.render(board);
         window.display();
-
-        //Timestep management
         int frameTicks = SDL_GetTicks() - startTick;
         if(frameTicks < 1000 / window.getRefreshRate())
             SDL_Delay(1000 / window.getRefreshRate() - frameTicks);

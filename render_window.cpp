@@ -3,7 +3,6 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-
 #include "RenderWindow.hpp"
 #include "Entity.hpp"
 #include "Square.hpp"
@@ -18,7 +17,6 @@ RenderWindow::RenderWindow(const char* title, int width, int height)
     windowHeight = height;
     windowWidth = width;
 }
-
 SDL_Texture* RenderWindow::loadTexture(const char* filePath)
 {
     SDL_Texture* texture = NULL;
@@ -26,7 +24,6 @@ SDL_Texture* RenderWindow::loadTexture(const char* filePath)
     if(texture == NULL) cout << "[ERROR] Texture Load Failed: " << SDL_GetError() << endl;
     return texture;
 }
-
 void RenderWindow::loadTextures(const char* filePath, vector<SDL_Texture*>& o_list)
 {
     ifstream list(filePath);
@@ -36,7 +33,6 @@ void RenderWindow::loadTextures(const char* filePath, vector<SDL_Texture*>& o_li
         o_list.push_back(loadTexture(currentTexture.c_str()));
     }
 }
-
 int RenderWindow::getRefreshRate()
 {
     int displayIndex = SDL_GetWindowDisplayIndex(window);
@@ -44,17 +40,14 @@ int RenderWindow::getRefreshRate()
     SDL_GetDisplayMode(displayIndex, 0, &mode);
     return mode.refresh_rate;
 }
-
 int RenderWindow::getWidth()
 {
     return windowWidth;
 }
-
 int RenderWindow::getHeight()
 {
     return windowHeight;
 }
-
 void RenderWindow::updateSize()
 {
     SDL_GetWindowSize(window, &windowWidth, &windowHeight);
