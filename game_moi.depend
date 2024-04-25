@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1714013117 source:d:\game_moi\math.cpp
+	<iostream>
+	"Vector2f.hpp"
+
+1714012771 d:\game_moi\vector2f.hpp
+
+1714013069 source:d:\game_moi\entity.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Entity.hpp"
+	"Vector2f.hpp"
+
+1714012895 d:\game_moi\entity.hpp
+	<SDL.h>
+	<SDL_image.h>
+	"Vector2f.hpp"
+
+1714015048 source:d:\game_moi\mouse.cpp
+	"Mouse.hpp"
+
+1714012830 d:\game_moi\mouse.hpp
+	<SDL.h>
+	<SDL_image.h>
+	"Vector2f.hpp"
+	"Square.hpp"
+
+1714012858 d:\game_moi\square.hpp
+	<array>
+	<vector>
+	"Vector2f.hpp"
+	"Entity.hpp"
+
+1714015486 source:d:\game_moi\board.cpp
+	<iostream>
+	<fstream>
+	<algorithm>
+	<vector>
+	"Vector2f.hpp"
+	"Mouse.hpp"
+	"Square.hpp"
+	"Board.hpp"
+
+1714012938 d:\game_moi\board.hpp
+	<vector>
+	"Vector2f.hpp"
+	"Mouse.hpp"
+	"Square.hpp"
+
+1714012944 source:d:\game_moi\square.cpp
+	<iostream>
+	<vector>
+	"Vector2f.hpp"
+	"Square.hpp"
+
+1714020050 source:d:\game_moi\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<iostream>
+	<utility>
+	<algorithm>
+	<vector>
+	<ctime>
+	"RenderWindow.hpp"
+	"Mouse.hpp"
+	"Entity.hpp"
+	"Board.hpp"
+	"Square.hpp"
+	"Vector2f.hpp"
+
+1714013049 d:\game_moi\renderwindow.hpp
+	<SDL.h>
+	<SDL_image.h>
+	<vector>
+	"Entity.hpp"
+	"Square.hpp"
+	"Board.hpp"
+
+1714022339 source:d:\game_moi\render_window.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<fstream>
+	<string>
+	"RenderWindow.hpp"
+	"Entity.hpp"
+	"Square.hpp"
+	"Board.hpp"
+
