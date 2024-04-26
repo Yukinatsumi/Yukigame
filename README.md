@@ -51,13 +51,13 @@ Cấu trúc của game gồm có 2 phần chính:
   # Mã nguồn
   |           File nguồn    |Chức năng|
   |--------------------------|---------|
-  |main.cpp|  |
-  |board.cpp|  |
-  |entity.cpp| |
-  |render_window.cpp|  |
-  |mouse.cpp|  |
-  |math.cpp|  |
-  |square.cpp|  |
+  |main.cpp| Tạo giao diện đồ họa và khởi tạo game, quản lý các sự kiện trên game |
+  |board.cpp| Tạo bảng sudoku ngẫu nhiên, quản lý các sự kiện xảy ra trên bảng sudoku   |
+  |entity.cpp| Đại diện cho các thực thể trong trò chơi, với các thuộc tính như vị trí, kích thước và texture. |
+  |render_window.cpp|Quản lý cửa sổ và hiển thị đối tượng đồ họa trên cửa sổ SDL |
+  |mouse.cpp| Theo dõi vị trí của con trỏ chuột và kiểm tra liệu con trỏ đó có nằm trong một đối tượng Entity hay không |
+  |math.cpp| Định nghĩa các phép toán cơ bản và các chức năng để làm việc với các vector 2 chiều |
+  |square.cpp| Lưu trữ thông tin và trạng thái của mỗi ô trong bảng Sudoku, bao gồm giá trị, vị trí, trạng thái được chọn, màu sắc và texture; cung cấp các phương thức để kiểm tra và cập nhật trạng thái của ô, cũng như để tạo ra các liên kết với các ô liên quan trong bảng. |
   # Nguồn tham khảo
 - CoderGopher: https://www.youtube.com/@codergopher8270
 - Nhóm Phát Triển Phần Mềm: https://phattrienphanmem123az.com/lap-trinh-game-c-p2
